@@ -1,14 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-var HelloWorld = React.createClass({
-  render: function(){
+
+class App extends React.Component {
+  render() {
     return (
       <div>
-        Hello World!
+        Hello World
+        { this.props.children }
       </div>
     )
   }
-})
+}
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'))
